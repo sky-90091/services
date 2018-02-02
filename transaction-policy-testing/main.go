@@ -154,36 +154,4 @@ func main() {
 		record the physical time (log in seconds) between transactions and how long 10 transactions took
 	*/
 	sendToAddress(walletFile.Name(), address, *dest)
-
-	/*
-		bal, err := visor.ReadableOutputsToUxBalances(unspent.Outputs.HeadOutputs)
-		if err != nil {
-			log.Fatal(err)
-		}
-		log.Printf("bal:%s", spew.Sdump(bal))
-
-		// key := wallet.Entries[0].Secret // bal[0].Address
-		// tx := cli.NewTransaction(spendOutputs, keys, txOuts)
-
-			inUxs, err := unspent.Outputs.SpendableOutputs().ToUxArray()
-			if err != nil {
-				log.Fatal(err)
-			}
-			log.Printf("uxs:%s", spew.Sdump(inUxs))
-
-			// create a transaction
-			// inject the transaction into the network
-			// record how many blocks the transaction took
-			// record the physical time (log in seconds) between transactions and how long 10 transactions took
-
-			wallet.Meta["filename"] = "/tmp/xx"
-			wallet.Meta["type"] = "deterministic"
-			_wallet, err := wallet.ToWallet()
-			if err != nil {
-				log.Fatal(err)
-			}
-			log.Printf("walletf:%s", spew.Sdump(_wallet))
-			tx, err := cli.CreateRawTx(rpc, &_wallet, []string{address}, address, []cli.SendAmount{to})
-	*/
-
 }
